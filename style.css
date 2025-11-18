@@ -1,0 +1,67 @@
+
+/*
+Theme Name: Greg Strugach
+Theme URI: https://your-site.com/themes/greg-strugach
+Author: Greg Strugach
+Author URI: https://your-site.com
+Description: A clean Bootstrap-based portfolio theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: greg-strugach
+Tags: portfolio, bootstrap, responsive, custom-menu
+*/
+
+
+/*
+Theme Name: Greg Strugach
+Theme URI: https://your-site.com/themes/greg-strugach
+Author: Greg Strugach
+Author URI: https://your-site.com
+Description: A clean Bootstrap-based portfolio theme.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: greg-strugach
+Tags: portfolio, bootstrap, responsive, custom-menu
+*/
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.navbar-nav .menu-item a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+.navbar-nav .menu-item a:hover {
+    color: #f8f9fa;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.site-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.full-width {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
