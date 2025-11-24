@@ -1,11 +1,8 @@
 /* Custom theme styles */
-body {
-  scroll-behavior: smooth;
-}
+body { scroll-behavior: smooth; }
+
 .visually-hidden-focusable:active,
 .visually-hidden-focusable:focus {
   position: static !important;
-  width: auto;
-  height: auto;
-  margin: 0;
+  width: auto; height: auto; margin: 0;
 }

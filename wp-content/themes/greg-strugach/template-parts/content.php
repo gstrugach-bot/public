@@ -5,7 +5,11 @@
     <?php endif; ?>
     <div class="card-body">
       <h2 class="h5 card-title">
-       _post( wp_trim_words( get_the_excerpt(), 24 ) ); ?></p>
+        <?php the_permalink(); ?><?php the_title(); ?></a>
+      </h2>
+      <p class="card-text">
+        <?php echo wp_kses_post( wp_trim_words( get_the_excerpt(), 24 ) ); ?>
+      </p>
     </div>
   </div>
 </article>
