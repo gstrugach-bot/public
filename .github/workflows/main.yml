@@ -1,3 +1,28 @@
-git add .github/workflows/zip-on-push.yml
-git commit -m "Add workflow to zip repo on push"
-git push origin main
+
+name: Zip repo on push
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Create ZIP from HEAD
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git archive --format=zip --output "${{ github.event.repository.name }}-${{ github.sha }}.zip" HEAD
+
+      - name: Upload ZIP as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-zip-${{ github.sha }}
+          path: "${{ github.event.repository.name }}-${{ github.sha }}.zip"
+          compression-level: 0  # already zipped
+
