@@ -1,0 +1,3 @@
+git add .github/workflows/zip-on-push.yml
+git commit -m "Add workflow to zip repo on push"
+git push origin main
