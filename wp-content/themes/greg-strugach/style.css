@@ -1,67 +1,55 @@
-
-/*
-Theme Name: Greg Strugach
-Theme URI: https://your-site.com/themes/greg-strugach
-Author: Greg Strugach
-Author URI: https://your-site.com
-Description: A clean Bootstrap-based portfolio theme.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: greg-strugach
-Tags: portfolio, bootstrap, responsive, custom-menu
-*/
-
-
-/*
-Theme Name: Greg Strugach
-Theme URI: https://your-site.com/themes/greg-strugach
-Author: Greg Strugach
-Author URI: https://your-site.com
-Description: A clean Bootstrap-based portfolio theme.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: greg-strugach
-Tags: portfolio, bootstrap, responsive, custom-menu
-*/
+/* Base */
+*,
+*::before,
+*::after { box-sizing: border-box; }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    color: #333;
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: #f9f9f9;
+  color: #333;
 }
 
-.navbar-nav .menu-item a {
-    color: #fff;
-    padding: 0.5rem 1rem;
-    text-decoration: none;
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  padding: 0.5rem 1rem;
 }
-.navbar-nav .menu-item a:hover {
-    color: #f8f9fa;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #f8f9fa;
 }
 
+/* Hero */
 .hero {
-    text-align: center;
-    padding: 50px 20px;
+  text-align: center;
+  padding: 3rem 1.25rem;
+  min-height: 60vh;
+  display: grid;
+  place-items: center;
 }
 
+/* Layout */
 .site-main {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem;
 }
 
+/* Projects */
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
 }
 
+/* Utility */
 .full-width {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; animation: none !important; }
 }
